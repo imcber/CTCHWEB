@@ -1,0 +1,35 @@
+.mainCointainerImc{
+  background: #ffffff;
+}
+
+.iconSideBar{
+  font-size: 1.1em;
+  color: #000000;
+}
+
+.rotate {
+
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin: left top;
+  -moz-transform: rotate(90deg);
+  -moz-transform-origin: left top;
+  -ms-transform: rotate(90deg);
+  -ms-transform-origin: left top;
+  -o-transform: rotate(90deg);
+  -o-transform-origin: left top;
+  transform: rotate(90deg);
+  transform-origin: left top;
+
+  position: absolute;
+  top: 10%;
+  white-space: nowrap;    
+  font-size: 25px;
+  color: #000000;
+  left: 75%;
+}
+
+.containerIcon{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+}

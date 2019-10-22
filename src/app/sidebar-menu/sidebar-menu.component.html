@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-md-1" style="text-align:center;">
+      <div #menuV [class]="'sidebarv'">
+        <div class="" style="text-align:center;">
+          <span class="rotate" (click)="_homeCF()">
+            Cogollo Frutal
+          </span>
+        </div>
+        <div class="containerIcon">
+          <ul class="iconSideBar">
+            <li *ngFor="let item of _arrayIconClass;" style="padding-top: 1em !important;">
+              <i class="fab {{item}}"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col col-md-11">
+      <div #mainContainer [class]="'sidebarv'">
+        <app-inside-view></app-inside-view>
+      </div>
+    </div>
+  </div>
+</div>

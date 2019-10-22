@@ -1,0 +1,38 @@
+<div class="row insideView" [hidden]="_bandVisibleMainView">
+    <div class="col-md-1"></div>
+    <div class="col-md-3" style="padding-top: 15%;">
+        <div>
+            <div #carrouselImc class="animated fadeInDown carrImc" *ngFor="let item of _arrayCarrouselIMC" [hidden]="!item.visible" style="text-align:center;">
+                <div class="col-md-12">
+                    <h3 (click)="showMyView(item)" class="title is-1" style=" color: #000000;">{{item.title}}</h3>
+                </div>
+                <div class="col-md-12">
+                    <br>
+                    <p class="title is-4" >{{item.subTitle}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-7 colorInsideView" [style.background]="_insideViewColor">
+        <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a *ngFor="let item of _arrayTitleNB;" class="navbar-item title is-{{item.size}}">{{item.text}}</a>
+                </div>
+            </div>
+        </nav>
+        <div class="carouselImc">
+            <mdb-carousel class="carousel-fade" [isControls]="true" [animation]="'fade'" (activeSlideChange)="_onActiveSlideChange($event)" style="text-align:center;">
+                <mdb-carousel-item *ngFor="let item of _arrayCarrouselIMC" style="display:block;">
+                  <div class="view" style="display:block;">
+                    <img class="d-block imgCarrousel" src="../../assets/img/imgCarrousel/{{item.img}}">
+                  </div>
+                </mdb-carousel-item>
+              </mdb-carousel>
+        </div>
+    </div>
+</div>
+<div *ngFor="let item of _arrayCarrouselIMC" class="row insideView" [hidden]="item.mainVisible">
+    <img class="iconReturnMV" (click)="_homeCF()" src="../../assets/img/imgCarrousel/MX.png">
+</div>

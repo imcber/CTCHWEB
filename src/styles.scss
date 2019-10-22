@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/grid/columns.sass";
+@import "bulma/css/bulma.css";
+//@import "bulma-carousel/dist/css/bulma-carousel.min.css";
+
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: Source Sans Pro, sans-serif;
+ }
